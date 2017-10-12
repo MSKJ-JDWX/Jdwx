@@ -1,0 +1,4 @@
+﻿{
+  "Name": "AspNetCache",
+  "Type": "Mingshu.Framework.MSWeb.Core.Caching.AspNetCache"
+}

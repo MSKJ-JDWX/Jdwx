@@ -1,0 +1,7 @@
+[
+  {
+    "Name": "Goods",
+    "ConnectionString": "data source=139.224.129.220;initial catalog=JDWX;persist security info=True;user id=jdwx;pwd=jdwx@2017;",
+    "ProviderName": "System.Data.SqlClient"
+  }
+]

@@ -1,0 +1,10 @@
+﻿[
+  {
+    "Name": "Log4net",
+    "Level": "All"
+  },
+  {
+    "Name": "Console",
+    "Level": "All"
+  }
+]

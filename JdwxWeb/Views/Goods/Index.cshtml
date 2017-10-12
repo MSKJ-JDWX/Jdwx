@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>折扣品</title>
+    <style>
+        body{ text-align:center} 
+        #div_center{margin:0 auto} 
+    </style>
+
+</head>
+<body>
+    <div>
+        <div id="div_center">
+            @*搜索框*@
+            <form align:center>
+                <input type="text" class="inputSearch" />
+                <input type="button" value="搜索" class="btnSearch"/>
+            </form>
+            <p></p>
+            @*<p>
+                当前页数:
+                @for (int i = 1; i <= 10; i++)
+                {
+                    <a href="">@i</a>
+                }
+            </p>*@
+        </div>
+        <div class="main">
+            @*<div class="col-md-3">
+                    <a href="http://sj.qq.com/myapp/detail.htm?apkName=com.alimama.moon">
+                        <img src="/img/softicon/tblm_icon.png" width="94" height="94" />
+                    </a>
+                    <h4>&nbsp;&nbsp;淘宝联盟</h4>
+                    <p><a class="btn btn-default" href="http://sj.qq.com/myapp/detail.htm?apkName=com.alimama.moon">进入下载 &raquo;</a></p>
+                </div>*@
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(".btnSearch").on('click', function () {
+            var input = $('.inputSearch').val();
+            $.getJSON("/api/Tbk/GetGoods?q=" + input).success(function (data) {
+                $(".main").html("")
+                $.each(data.tbk_item_get_response.results.n_tbk_item, function (i, item) {
+                    $(".main").append("<div class='col-md-3'>"
+                        + "<p><a href='" + item.item_url + "'><img src='" + item.pict_url + "' width='280' height='200'/></a></p>"
+                        + "<p width='280'>" + item.title + "</p>"
+                        + "<p> 原价:<s>￥" + item.reserve_price + "</s>&nbsp;&nbsp;&nbsp;&nbsp;"
+                        + "折后价:<font color='red'>￥" + item.zk_final_price + "</font></p>"
+                        + "<p><a class='btn btn-default' href='" + item.item_url + "'>点击进入购买</a></p>"
+                        + "</div>");
+                });
+            })
+        })
+        $(document).ready(
+            $.getJSON("/api/Tbk/GetGoods").success(function (data) {
+                $(".main").html("")
+                $.each(data.tbk_item_get_response.results.n_tbk_item, function (i, item) {
+                    $("main").append("<div class='col-md-3'>"
+                        + "<p><a href='" + item.item_url + "'><img src='" + item.pict_url + "' width='280' height='200'/></a></p>"
+                        + "<p width='280'>" + item.title + "</p>"
+                        + "<p> 原价:<s>￥" + item.reserve_price + "</s>&nbsp;&nbsp;&nbsp;&nbsp;"
+                        + "折后价:<font color='red'>￥" + item.zk_final_price + "</font></p>"
+                        + "<p><a class='btn btn-default' href='" + item.item_url + "'>点击进入购买</a></p>"
+                        + "</div>");
+                });
+            })
+        )
+    </script>
+</body> 
+</html>

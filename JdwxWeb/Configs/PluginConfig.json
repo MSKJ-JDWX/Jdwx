@@ -1,0 +1,7 @@
+﻿{
+  "PluginsPath": "~/Plugins",
+  "ShadowCopyPath": "~/Plugins/bin",
+  "InstalledPluginsFilePath": "~/App_Data/InstalledPlugins.txt",
+  "ClearPluginsShadowDirectoryOnStartup": true,
+  "DescriptionFileName": "Description.txt"
+}
