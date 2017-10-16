@@ -56,10 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAdvertisementService.cs" />
-    <Compile Include="ICommonService.cs" />
-    <Compile Include="IGoodsService.cs" />
-    <Compile Include="IQuestionsService.cs" />
     <Compile Include="IUsersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

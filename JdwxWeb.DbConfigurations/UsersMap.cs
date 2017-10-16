@@ -18,52 +18,46 @@ namespace JdwxWeb.DbConfigurations
             this.ToTable("Users");
 
             this.Property(e => e.ID)
-                .HasColumnName("id")
                 .HasMaxLength(36);
 
-            this.Property(e => e.userid)
+            this.Property(e => e.UserCode)
                 .HasMaxLength(20);
 
-            this.Property(e => e.password)
+            this.Property(e => e.PassWord)
                 .HasMaxLength(36);
 
-            this.Property(e => e.nickname)
+            this.Property(e => e.Nickname)
                 .HasMaxLength(20);
 
-            this.Property(e => e.idcard)
+            this.Property(e => e.IdCard)
                 .HasMaxLength(18);
 
-            this
-                .Property(e => e.realname)
+            this.Property(e => e.RealName)
                 .HasMaxLength(32);
 
-            this
-                .Property(e => e.phonenumber)
+            this.Property(e => e.PhoneNumber)
                 .HasMaxLength(11);
 
-            this
-                .Property(e => e.avatar)
+            this.Property(e => e.Avatar)
                 .HasMaxLength(800);
 
-            this
-                .Property(e => e.usersignature)
+            this.Property(e => e.UserSignature)
                 .HasMaxLength(256);
 
-            this
-                .Property(e => e.wechat)
+            this.Property(e => e.Wechat)
                 .HasMaxLength(36);
 
-            this
-                .Property(e => e.qq)
+            this.Property(e => e.QQ)
                 .HasMaxLength(16);
 
-            this
-                .Property(e => e.sina)
+            this.Property(e => e.Sina)
                 .HasMaxLength(32);
 
-            this
-                .Property(e => e.taobao)
+            this.Property(e => e.Taobao)
                 .HasMaxLength(64);
+
+            this.Property(e => e.Address)
+                .HasMaxLength(512);
         }
     }
 }

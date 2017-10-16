@@ -1,0 +1,634 @@
+@charset "utf-8";
+
+/*公共样式*/
+.bg-state{
+	position: fixed;
+    left: 224px;
+    right: 0;
+    padding: 10px;
+    z-index: 200;
+}
+
+.bg-state i{
+	float: right;
+}
+.bg-success{
+	color: #fff;
+    background-color:#44DB5E;
+}
+.bg-error{
+	color: #fff;
+    background-color: #FE3824;
+}
+.has-error .form-control{
+	border-color: #FF3939 !important;
+}
+.bitian{
+    margin-right: 10px;
+    color: #f00;
+    font-size: 14px;
+    font-family: initial;
+    font-style: normal;
+}
+i.clearAll{
+	position: absolute;
+    left: 180px;
+    top: 5px;
+    cursor: pointer;
+    display: none;
+}
+input.error{
+	border-color:#f05050 !important;
+}
+input.valid{
+	border-color:#1FC71E;
+}
+label.error{
+	padding-left: 20px;
+	color: #f05050;
+	background:url("../img/error.gif") no-repeat left center;
+}
+/*表单特殊处理*/
+.over-auto{
+	overflow: auto;
+}
+.table-scr{
+	width: 1800px;
+    max-width: none !important;
+	overflow: auto;
+}
+/*宽度*/
+.wp30{
+	width:30% !important;
+}
+.wp60{
+	width:60%;
+}
+.wp70{
+	width:70%;
+}
+/*高度*/
+.hs500{
+	max-height: 500px;
+	overflow: auto;
+}
+.hs600{
+	max-height: 600px;
+	overflow: auto;
+}
+/*左侧菜单*/
+#leftmenu{
+	position: absolute !important;
+    top: 0;
+    bottom: 0;
+}
+.navbar-collapse{
+	max-height: auto !important;
+}
+/*遮罩*/
+.tip-content
+{
+	position: fixed;
+	top:50%;
+	left: 50%;
+	z-index: 20001;
+    width: 200px;
+    height: 100px;
+	margin-left: -100px;
+	margin-top: -50px;
+    border:1px solid red;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #fff;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
+	display: none;
+}
+.tip-mask{
+    position: fixed;
+	width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    background: #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    display: none;
+}
+.tip-word{
+	margin: 15px auto;
+	color: #333333;
+	font-size: 12px;
+}
+.tip-word>img{
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.tip-content a{
+	padding: 3px 18px;
+	color:#FCFCFC;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.tip-btn{
+	padding-top:15px;
+	text-align: center;
+}
+.tip-content a:hover{
+	text-decoration: none;
+}
+.tip-content .cancel{
+	color: #666;
+	background: #fff;
+	border: 1px solid #E0E0E0;
+}
+.tip-content .ok{
+	margin-left: 20px;
+	color: #FCFCFC;
+	border: 1px solid #3395FF;
+	background: #3395FF;
+}
+/*项目基本信息*/
+.project{
+}
+.project .pro-filter{
+	
+}
+.project .pro-line{
+	margin-top: 4px;
+	margin: 4px 10px 0px;
+	font-weight: bold;
+}
+
+.w70{
+	width: 98px !important;
+	height: 28px;
+}
+.w100{
+	width: 100px !important;
+}
+.w155{
+	width: 155px !important;
+}
+.w160{
+	width: 160px !important;
+}
+.w200{
+	width: 200px !important;
+}
+.mtp3{
+	margin-top: 3px !important;
+}
+.mtp7{
+	margin-top: 7px !important;
+}
+.ml40{
+	margin-left: 40px !important;
+}
+.lh30{
+	line-height: 30px;
+}
+.null-100{
+	height: 100px;
+}
+.null-150{
+	height: 150px;
+}
+.null-200{
+	height: 200px;
+}
+.null-300{
+	height: 300px;
+}
+.null-500{
+	height: 500px;
+}
+/*项目研究阶段*/
+.research{
+	
+}
+.res-cycle input{
+	display: inline-block;
+    * display: inline;
+    * zoom: 1;
+	width: 24% !important;
+}
+.res-operation a{
+	color: #007AF4;
+    text-decoration: none;
+}
+.res-operation a:hover{
+    outline: 0;
+    color: #48A3FF;
+}
+/*研究阶段详细信息*/
+.phase{
+	
+}
+.pha-radio{
+	margin-left: 50px;
+}
+/*申请信息明细*/
+.detail{
+}
+.det-base{
+}
+.det-base-left li{
+	margin-bottom: 15px;
+}
+.det-base-left a{
+	display: block;
+    height: 30px;
+    color: #666;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    
+}
+.det-base-left a:hover{
+    background-color: #fff;
+}
+.det-base-left li.active a{
+    background-color: #fff;
+    border-left-color: #3896FF;
+}
+.base-title{
+	height: 28px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	line-height: 28px;
+	color: #87C1E7;
+	font-size: 16px;
+	border-bottom: 1px solid #E0E0E0;
+	clear: both;
+}
+.det-base-right{
+	position: relative;
+	overflow: hidden;
+}
+.det-base-right>div{
+	/*width: 100%;
+	height: 300px;
+	border:1px solid #1B8FD3;*/
+}
+i.label{
+	cursor: pointer;
+	font-style: normal;
+}
+.bgfb{
+	background: #FBFBFB;
+}
+.pp80{
+	width: 73%;
+}
+.mtp9{
+	margin-top:9px !important;
+}
+table td{
+	position: relative;
+}
+/*立项初审申请*/
+
+
+/*步骤进度*/
+td.alt-container:hover .alt-msg{
+	display: block;
+}
+.alt-msg{
+	position: absolute;
+	top:35px;
+	right:10px;
+	z-index: 1000;
+	width: 570px;
+	height: 80px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0px 2px 3px rgba(0,0,0,0.10);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: none;
+}
+.alt-msg>ul{
+	margin-top: 32px;
+	margin-left: 28px;
+}
+.alt-msg>ul>li{
+	float: left;
+}
+.alt-msg>ul>li.active{
+	float: left;
+	background-color:#48A3FF;
+}
+.alt-msg .line{
+	width: 90px;
+	height:2px ;
+	margin-top: 4px;
+	background-color:#E0E0E0;
+	
+}
+.alt-msg .loop{
+	position: relative;
+	width: 10px;
+	height: 10px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color:#E0E0E0;
+}
+.alt-msg .loop>*{
+	position: absolute;
+	color: #333;
+	font-size: 14px;
+}
+.alt-msg .loop>span{
+	top: -23px;
+    left: -16px;
+    min-width: 40px;
+}
+.alt-msg .loop>time{
+    top: 11px;
+    left: -20px;
+    font-size: 12px;
+}
+
+/*header*/
+a.navbar-brand{
+	padding: 10px 15px !important;
+}
+.none-bg{
+	font-size: 50px;
+	background-image: none !important;
+}
+.none-bg i{
+	position: absolute;
+    top: -8px;
+    left: -6px;
+    color: #fff;
+    font-size: 50px !important;
+}
+.page-sidebar-menu{
+	
+}
+.page-sidebar-menu .open{
+	
+}
+.font-22{
+	font-size: 22px !important;
+}
+.color41{
+	color: #414141 !important;
+}
+i.iconfonta:hover{
+	color: #48A3FF !important;
+}
+
+/*
+ * 
+*监管平台*/
+.org-magment{
+	
+}
+.org-num{
+	color: #6699ff;
+	cursor: pointer;
+}
+.holder{
+	height: 200px;
+	clear: both;
+}
+/*档案信息*/
+.scdj .left{
+	float: left;
+	width: 23%;
+}
+.scdj .active a{
+	background-color: #fff;
+	border-left-color: #3896FF;
+}
+.scdj a{
+	display: block;
+	height: 30px;
+	padding-left: 20px;
+	color: #666;
+	line-height: 30px;
+	text-decoration: none;
+	border-left: 4px solid transparent;
+}
+.scdj .right{
+	float: left;
+	width: 77%;
+	height:500px;
+	overflow-y: scroll;
+}
+
+/*生产商档案*/
+.pdc-range>*{
+	float:left;
+}
+.pdc-range>input{
+	width:23.1%;
+}
+
+/*订单审核选项*/
+.order-sec1{
+	padding: 12px 0px;
+}
+.order-sec1>ul>li{
+	float: left;
+	margin-right: 10px;
+	line-height: 22px;
+}
+.order-sec1 label{
+	display: inline-block;
+}
+.switch {
+    display:inline-block;
+    position: relative;
+}
+.switch input {
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+}
+.switch input + span {
+    -moz-user-select: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.switch input + span::before {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+}
+.switch input + span > h4 {
+    display: inline;
+}
+.switch input + span {
+    padding-left: 40px;
+}
+.switch input + span::before {
+    background: #c1c1c1 none repeat scroll 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+    content: "";
+    height: 20px;
+    transition: background 0.2s ease-out 0s;
+    width: 40px;
+}
+.switch input + span::after {
+    background: #ffffff none repeat scroll 0 0;
+    content: "";
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: margin-left 0.1s ease-in-out 0s;
+    width: 20px;
+}
+.switch input:checked + span::after {
+    content: "";
+    margin-left: 20px;
+}
+.switch input:checked + span::before {
+    transition: background 0.2s ease-in 0s;
+}
+.switch input + span {
+    padding-left: 40px;
+}
+.switch input + span::before {
+    border-radius: 20px;
+    width: 40px;
+}
+.switch input + span::after {
+    background: #ffffff none repeat scroll 0 0 padding-box;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    content: "";
+    width: 20px;
+}
+.switch input:disabled + span::after {
+    background: #c1c1c1 none repeat scroll 0 0;
+}
+.switch input:not(:checked) + span::after {
+    animation: 0.3s ease-in 0s normal none 1 running popOut;
+}
+.switch input:checked + span::after {
+    animation: 0.3s ease-in 0s normal none 1 running popIn;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    content: "";
+    margin-left: 20px;
+}
+.switch input:checked + span::before {
+    background: #48a3ff none repeat scroll 0 0;
+}
+.switch input:disabled + span::before {
+    background: #ebebeb none repeat scroll 0 0;
+}
+.switch.switch-md input + span::before {
+    border-radius: 30px;
+}
+.switch.switch-md input + span::after {
+    border-radius: 30px;
+}
+.switch.switch-lg input + span::before {
+    border-radius: 40px;
+}
+.switch.switch-lg input + span::after {
+    border-radius: 40px;
+}
+.switch input + span::before {
+    box-shadow: none;
+}
+.switch-sm {
+    line-height: 10px;
+}
+.switch-sm input + span {
+    padding-left: 28px;
+}
+.switch-sm input + span::before {
+    width: 28px;
+}
+.switch-sm input + span::after, .switch-sm input + span::before {
+    height: 14px;
+    line-height: 10px;
+}
+.switch-sm input + span::after {
+    vertical-align: middle;
+    width: 14px;
+}
+.switch-sm input:checked + span::after {
+    margin-left: 14px;
+}
+.order-content{
+	line-height: 30px;
+}
+.order-content span{
+	color: #666;
+}
+.order-ts{
+	color: #333;
+	font-size: 14px;
+}
+.order-content .line{
+	border-bottom: 1px solid #F3F3F3;
+}
+/*药品采购计划审核*/
+.drug-tab{
+	border: none !important;
+	border-bottom: 1px solid #e0e0e0 !important;
+}
+.drug-tab>li{
+	border-top: 1px solid #e0e0e0;
+}
+/*特殊敏感药品添加*/
+.special-note{
+	margin-top: -29px;
+	color:#999;
+	font-size: 12px;
+}
+.special-note>*{
+	margin-bottom: 5px;
+}
+.folding{
+	position: relative;
+	text-align: center;
+	height: 0px;
+}
+.folding i{
+	position: relative;
+    top: -9px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	color: #E3E3E3;
+	line-height: 16px;
+	background: #fff;
+	border: 1px solid #E3E3E3;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	cursor: pointer;
+}

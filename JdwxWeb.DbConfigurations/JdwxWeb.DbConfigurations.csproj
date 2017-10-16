@@ -54,10 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvertisementsMap.cs" />
-    <Compile Include="GoodsMap.cs" />
-    <Compile Include="QuestionsMap.cs" />
-    <Compile Include="UserloginrecordMap.cs" />
     <Compile Include="UsersMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

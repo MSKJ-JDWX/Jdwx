@@ -33,13 +33,13 @@ namespace JdwxWeb.Services
                 ReturnResult<bool> result = new ReturnResult<bool>();
                 Expression<Func<Users, bool>> exp = x => x.ID == id;
                 var user = await this.FindOneAsync<UsersModel, Users>(repository, exp);
-                oldPassword = EncryptUtil.EncryptDES(oldPassword, (user.registertime ?? DateTime.Now)
+                oldPassword = EncryptUtil.EncryptDES(oldPassword, (user.RegisterTime ?? DateTime.Now)
                        .ToString(timeStyle));
-                if(user.password == oldPassword)
+                if(user.PassWord == oldPassword)
                 {
                     result.data = await this.Update<Users>(repository, id, 
-                        x => x.password = EncryptUtil.EncryptDES(newPassword,
-                        (user.registertime ?? DateTime.Now).ToString(timeStyle)));
+                        x => x.PassWord = EncryptUtil.EncryptDES(newPassword,
+                        (user.RegisterTime ?? DateTime.Now).ToString(timeStyle)));
                     if (result.data)
                     {
                         result.code = 1;
@@ -68,10 +68,10 @@ namespace JdwxWeb.Services
             return await Aspect.Task(async () =>
             {
                 ReturnResult<PagedData<UsersModel>> result = new ReturnResult<PagedData<UsersModel>>();
-                Expression<Func<Users, bool>> exp = x => (x.usertype == type || (type == 9 && x.usertype != 5)) 
-                    && (string.IsNullOrEmpty(filter) || x.userid.Contains(filter));
+                Expression<Func<Users, bool>> exp = x => (x.Usertype == type || (type == 9 && x.Usertype != 5)) 
+                    && (string.IsNullOrEmpty(filter) || x.UserCode.Contains(filter));
                 var users = await this.FindResultWithPagingAsync<UsersModel, Users>(repository,curPage,pageSize, exp,
-                    x => new { x.registertime},SortOrder.Descending);
+                    x => new { x.RegisterTime},SortOrder.Descending);
                 if (users == null || users.DataList == null || users.DataList.Count == 0)
                 {
                     result.code = -104;
@@ -91,10 +91,11 @@ namespace JdwxWeb.Services
             return await Aspect.Task(async () =>
             {
                 ReturnResult<UsersModel> result = new ReturnResult<UsersModel>();
-                Expression<Func<Users, bool>> exp = x => x.userid == strCode;
+                Expression<Func<Users, bool>> exp = x => x.UserCode == strCode;
                 var user = await this.FindOneAsync<UsersModel, Users>(repository, exp);
                 if(user != null && !string.IsNullOrEmpty(user.ID))
                 {
+                    LogUtil.WebLog("ID:" + user.ID);
                     result.code = -105;
                     result.message = "无法注册，用户名已存在！";
                     return result;
@@ -106,11 +107,11 @@ namespace JdwxWeb.Services
                     UsersModel tempUser = new UsersModel
                     {
                         ID = Guid.NewGuid().ToString(),
-                        userid = strCode,
-                        nickname = strCode,
-                        password = EncryptUtil.EncryptDES(password, now.ToString(timeStyle)),
-                        usertype = 0,
-                        registertime = now,
+                        UserCode = strCode,
+                        Nickname = strCode,
+                        PassWord = EncryptUtil.EncryptDES(password, now.ToString(timeStyle)),
+                        Usertype = 0,
+                        RegisterTime = now,
                     };
 
                     bool isRegistSuccess = await this.Add(tempUser);
@@ -158,10 +159,7 @@ namespace JdwxWeb.Services
             return await Aspect.Task(async () =>
             {
                 ReturnResult<UsersModel> result = new ReturnResult<UsersModel>();
-
-
-                Expression<Func<Users, bool>> exp = x => x.userid == strCode;
-
+                Expression<Func<Users, bool>> exp = x => x.UserCode == strCode;
                 var user = await this.FindOneAsync<UsersModel, Users>(repository, exp);
 
                 if (user == null)
@@ -172,8 +170,8 @@ namespace JdwxWeb.Services
                 }
                 else
                 {
-                    if (EncryptUtil.EncryptDES(password, (user.registertime ?? DateTime.Now)
-                            .ToString(timeStyle)) != user.password)
+                    if (EncryptUtil.EncryptDES(password, (user.RegisterTime ?? DateTime.Now)
+                            .ToString(timeStyle)) != user.PassWord)
                     {
                         result.code = -102;
                         result.message = "您输入的密码错误！";

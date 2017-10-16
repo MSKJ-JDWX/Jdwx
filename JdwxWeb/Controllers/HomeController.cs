@@ -26,35 +26,22 @@ namespace JdwxWeb.Controllers
             return View();
         }
 
-        public ActionResult GoodsIndex()
-        {
-            ViewBag.Title = "闪荐";
-            return View("~/Views/Home/GoodsIndex.cshtml");
-        }
-
         public ActionResult AboutUs()
         {
-            ViewBag.Title = "关于闪荐";
+            ViewBag.Title = "关于我们";
             return View("~/Views/Home/Aboutus.cshtml");
         }
 
-        public ActionResult Recruit()
+        public ActionResult Login()
         {
-            ViewBag.Title = "招募令";
-            return View("~/Views/Home/Recruit.cshtml");
+            ViewBag.Title = "登录";
+            return View("~/Views/Home/Login.cshtml");
         }
 
-        public ActionResult SjDownload()
+        public ActionResult Register()
         {
-            ViewBag.Title = "下载闪荐";
-            return View("~/Views/Home/SjDownload.cshtml");
+            ViewBag.Title = "登录";
+            return View("~/Views/Home/Register.cshtml");
         }
-
-        public ActionResult SoftDownload()
-        {
-            ViewBag.Title = "下载闪荐";
-            return View("~/Views/Home/SoftDownload.cshtml");
-        }
-
     }
 }

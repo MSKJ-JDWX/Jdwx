@@ -1,0 +1,46 @@
+﻿
+<div class="jumbotron">
+    <div id="register-main" style="text-align:center">
+        <table style="text-align:center;margin:auto">
+            <tr>
+                <td>用户名:</td>
+                <td><input id="txtUserCode" type="text" name="UserCode" /></td>
+            </tr>
+            <tr>
+                <td>用户昵称:</td>
+                <td><input id="txtUserName" type="text" name="UserName" /></td>
+            </tr>
+            <tr>
+                <td>用户密码:</td>
+                <td><input id="txtPassword" type="password" name="Password" /></td>
+            </tr>
+            <tr>
+                <td><input class="registerbutton" id="btnRegister" type="button" value="注册" /></td>
+                <td><input id="btnClear" type="button" value="重置" onclick="ResetForm()" /></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".registerbutton").click(function () {
+        var data = {
+            UserCode: $("#txtUserCode").val(),
+            Password: $("#txtPassword").val()
+        }
+
+        $.ajax({
+            url: "/Jdwx/test/api/Users/RegisterUserInfo",
+            type: "post",
+            data: data,
+            success: function (rst) {
+                if (rst.code > 0) {
+                    alert("注册成功");
+                } else {
+                    alert(rst.message);
+                }
+            }
+        });
+    })
+</script>
+

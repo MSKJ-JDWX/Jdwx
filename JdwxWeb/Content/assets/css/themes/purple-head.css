@@ -1,0 +1,20 @@
+body {
+ background-color: #F5F5F5 !important;
+}
+.header {
+  filter: none !important;
+  background-image: none !important;
+  background-color: #738AAD !important;
+  box-shadow: 0 1px 1px 0 rgba(18,97,143,0.5);
+}
+.page-sidebar {
+    background-color: #fff;
+}
+.header .navbar-nav li.dropdown .dropdown-toggle i {
+    color: #fff !important;
+}
+.page-sidebar-menu > li > ul.sub-menu > li > a.menuCur
+{
+  border-left: 6px solid #536996;
+  background: #f5f5f5;
+}

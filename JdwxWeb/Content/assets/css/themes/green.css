@@ -1,0 +1,66 @@
+body {
+ background-color: #F5F5F5 !important;
+}
+.header {
+  filter: none !important;
+  background-image: none !important;
+  background-color: #00B7A6 !important;
+  box-shadow: 0 1px 1px 0px rgba(18,97,143,0.5);
+}
+.page-sidebar {
+    background-color: #fff;
+}
+.header .navbar-nav li.dropdown .dropdown-toggle i {
+    color: #fff !important;
+}
+.page-sidebar{
+  background: #353F4c;
+}
+.page-sidebar-menu > li > a i
+{
+  color: #fff !important;
+}
+.page-sidebar-menu > li > a
+{
+  color: #fff !important;
+}
+.page-sidebar-menu > li > ul.sub-menu > li > a
+{
+  color: #fff !important;
+}
+.page-sidebar-menu > li > ul.sub-menu > li > a.menuCur
+{
+  border-left: 6px solid #00A38D;
+  background: #2a323e;
+}
+
+ul.page-sidebar-menu > li > ul.sub-menu > li > a:hover {
+    background: #4D5562 !important;
+}
+ul.page-sidebar-menu > li.open > a{
+	background: #2A323E;
+}
+.footer {
+    background: #2a323e;
+    color: #fff;
+    border: none;
+    border-top: 1px solid #353F4c;
+    padding: 12px 20px 5px 20px;
+    font-size: 12px;
+    height: 40px;
+    float: left;
+    width: 100%;
+}
+.page-sidebar-closed .page-sidebar-menu > li:hover
+ {
+    border: none;
+}
+
+.page-sidebar-closed .page-sidebar-menu > li:hover > .sub-menu
+{
+  background: #353F4c;
+}
+.page-sidebar-closed .page-sidebar-menu > li:hover{
+  width: 241px !important;
+  background: #2A323E;
+}

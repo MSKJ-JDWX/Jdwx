@@ -64,11 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvertisementService.cs" />
-    <Compile Include="CommonService.cs" />
-    <Compile Include="GoodsService.cs" />
     <Compile Include="Mapper\DtoMapper.cs" />
-    <Compile Include="QuestionsService.cs" />
     <Compile Include="UsersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

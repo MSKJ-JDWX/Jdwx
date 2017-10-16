@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/28/2017 14:39:27" ReportInfo.Modified="03/28/2017 15:07:41" ReportInfo.CreatorVersion="2014.2.3.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {     
+
+    private void Page1_StartPage(object sender, EventArgs e)
+    {
+        Barcode1.Text=(Report.Parameters.FindByName(&quot;XM&quot;)).Value.ToString();
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <Parameter Name="Bqmc" DataType="System.String"/>
+    <Parameter Name="Qrcode" DataType="System.String"/>
+    <Parameter Name="XM" DataType="System.String"/>
+    <Parameter Name="Rwdh" DataType="System.String"/>
+    <Parameter Name="Fhry" DataType="System.String"/>
+    <Parameter Name="XM_Index" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" PaperHeight="60" StartPageEvent="Page1_StartPage">
+    <DataBand Name="Data1" Top="20" Width="226.8" Height="256.85">
+      <BarcodeObject Name="Barcode1" Width="116" Height="116" ShowText="false" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Bqmc" Left="122.85" Top="47.25" Width="94.5" Height="18.9" Text="[Bqmc]" Font="宋体, 9pt"/>
+      <TextObject Name="Text1" Left="9.45" Top="122.85" Width="198.45" Height="18.9" Text="任务单号：[Rwdh]" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Left="9.45" Top="151.2" Width="198.45" Height="18.9" Text="箱码：[XM]" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="9.45" Top="179.55" Width="141.75" Height="18.9" Text="复核员：[Fhry]" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Left="160.65" Top="179.55" Width="94.5" Height="18.9" Text="[XM_Index]" Font="宋体, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

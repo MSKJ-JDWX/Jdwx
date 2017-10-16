@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\AdInfo.cs" />
-    <Compile Include="Business\CouponInfo.cs" />
-    <Compile Include="Model\AdvertisementsModel.cs" />
-    <Compile Include="Model\GoodsModel.cs" />
-    <Compile Include="Model\QuestionsModel.cs" />
-    <Compile Include="Model\UserloginrecordModel.cs" />
     <Compile Include="Business\ReturnResult.cs" />
     <Compile Include="Business\UserInfo.cs" />
     <Compile Include="Model\UsersModel.cs" />

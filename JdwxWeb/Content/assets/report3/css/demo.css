@@ -1,0 +1,369 @@
+html{
+	font-size: 100px;
+}
+
+body{
+	background: url(../img/background-blue.png);
+	background-size: 100% 100%;
+	font-family: "微软雅黑";
+}
+
+ul ,li{
+	margin: 0 0;
+	padding: 0 0;
+}
+
+li{
+	list-style:none;
+}
+
+/*字色*/
+.font-blue{
+	color: #198ddd;
+}
+
+.font-yellow{
+	color: #ddd119;
+}
+
+.font-white{
+	color: #fff;
+}
+
+.font-white-40{
+	color: rgba(255, 255, 255 , .4);
+}
+
+.font-white-60{
+	color: rgba(255, 255, 255 , .6);
+}
+
+.font-white-87{
+	color: rgba(255, 255, 255 , .87);
+}
+
+/*定位*/
+.margin-top-10{
+	margin-top: .1rem;
+}
+
+.leftpart{
+	float: left;
+	width: 7.32rem;
+}
+
+.config-background{
+	margin-top: .27rem;
+	margin-left: .32rem;
+	width: .8rem;
+	height: .3rem;
+}
+
+.config-background img{
+	width: .24rem;
+	height: .24rem;
+}
+
+.config-background span{
+	margin-left: .1rem;
+	font-size: .16rem;
+	color: #fff;
+}
+
+.time-show{
+	margin-top: 1.3rem;
+	margin-right: .7rem;
+	height: .72rem;
+}
+
+.time-show .time{
+	float: right;
+	margin-top: .04rem;
+	padding-left: .3rem ;
+	height: .64rem;
+	line-height: .64rem;
+	font-size: .65rem;
+	color: rgba(255,255,255,.7);
+	border-left: .01rem solid rgba(255,255,255,.7);
+}
+
+.time-show .data{
+	float: right;
+	margin-right: .36rem;
+	width: 3rem;
+}
+
+.time-show .data .datatime{
+	float: right;
+	font-size: .21rem;
+	color: rgba(255,255,255,.7);
+}
+
+.time-show .data .weekend{
+	float: right;
+	font-size: .3rem;
+	color: rgba(255,255,255,.7);
+}
+
+.data-show{
+	margin-top: .44rem;
+	margin-left: .66rem;
+	height: 1.94rem;
+}
+
+.data-show .data-block{
+	float: left;
+	margin-left: .08rem;
+	width: 1.94rem;
+	height: 1.94rem;
+	color: rgba(255,255,255,.7);
+	background-color: rgba(0, 0, 0, .15);
+}
+
+.data-show .data-block .title{
+	display: block;
+	margin-top: .4rem;
+	width: 100%;
+	text-align: center;
+	font-size: .18rem;
+	
+}
+
+.data-show .data-block .number{
+	display: block;
+	margin-top: .2rem;
+	width: 100%;
+	text-align:  center;
+	font-size: .64rem;
+}
+
+.chart-show{
+	margin-top: .6rem;
+	margin-left: .72rem;
+	width: 6rem;
+	height: 3rem;
+}
+
+.hospital-logo{
+	position: absolute;
+	left: .26rem;
+	bottom: .12rem;
+}
+
+.logo-top img{
+	margin-top: -.16rem;
+}
+
+.logo-top span{
+	display: inline-block;
+	margin-top: .08rem;
+	margin-left: .12rem;
+	padding-left: .16rem;
+	height: .28rem;
+	line-height: .36rem;
+	font-size: .24rem;
+	border-left: .01rem solid rgba(255, 255 ,255 ,.75);
+}
+
+.logo-bottom span{
+	font-size: .12rem;
+}
+
+.rightpart{
+	float: left;
+	height: 1080px;
+	overflow: hidden;
+}
+
+.borderlist{
+	position:relative;
+}
+
+.mirror{
+	position:relative;
+}
+
+.border{
+	margin-top: .34rem;
+	margin-left: .44rem;
+	width: 11rem;
+	height: .85rem;
+}
+
+.leftborder{
+	float: left;
+	height: .66rem;
+}
+
+.leftborder-blue{
+	border-left: .08rem solid #198ddd;
+}
+
+.leftborder-yellow{
+	border-left: .08rem solid #ddd119;
+}
+
+.leftborder-white{
+	border-left: .08rem solid #fff;
+}
+
+.leftborder span{
+	display: block;
+	margin-left: .34rem;
+	font-size: .22rem;
+}
+
+.rightborder{
+	float: right;
+}
+
+.topborder{
+	width: 6.8rem;
+	height: .44rem;
+}
+.ball{
+	float: left;
+	width: .44rem;
+	height: .44rem;
+	line-height: .44rem;
+	text-align: center;
+	font-size: .26rem;
+	border-radius: 100%;
+}
+
+.ball-blue{
+	color: #fff;
+	background: #198ddd;
+}
+
+.ball-yellow{
+	color: #000;
+	background: #ddd119;
+}
+
+.ball-white{
+	color: #198ddd;
+	background: #fff;
+}
+
+.arrow{
+	float: left;
+	margin-top: .16rem;
+}
+
+.arrow .stick {
+	width: 2.54rem;
+	margin-top: .05rem;
+	height: .02rem;
+	float: left;
+	background: #198ddd;
+}
+
+.arrow .arrow-right {
+	width: 0; 
+	height: 0; 
+	float: left;
+	border-bottom: .06rem solid transparent; /* 下边框的高 */ 
+	border-top: .06rem solid transparent; /* 上方边框的高 */ 
+	border-left: .16rem solid #198ddd; /* 左边框的长度|宽度，以及背景色 */ 
+	font-size: 0; 
+	line-height: 0; 
+}
+
+.arrow .stick-blue{
+	background: #198ddd;
+}
+
+.arrow .arrow-blue{
+	border-left-color: #198ddd;
+}
+
+.arrow .stick-yellow{
+	background: #ddd119;
+}
+
+.arrow .arrow-yellow{
+	border-left-color: #ddd119;
+}
+
+.arrow .stick-white{
+	background: #fff;
+}
+
+.arrow .arrow-white{
+	border-left-color: #fff;
+}
+
+.middleborder{
+	position: relative;
+	top: -.1rem;
+	width: 6.8rem;
+	height: .3rem;
+}
+
+.middleborder span{
+	display: inline-block;
+	width: 3.35rem;
+	text-align: center;	
+	font-size: .24rem;
+}
+
+.bottomborder {
+	position: relative;
+	top: -.12rem;
+	left: -.2rem;
+	margin-right: -2rem;
+}
+
+.bottomborder ul li{
+    width:1.2rem;
+	float:left;
+	margin-left: 0;
+	margin-right: 2rem;
+	font-size: .18rem;
+	color: rgba(255, 255, 255 ,.5);
+}
+
+.changebackground{
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3rem;
+	height: 1rem;
+	background: #fff;
+	z-index: 10;
+}
+
+.changebackground span{
+	display: inline-block;
+	width: 30%;
+	height: 90%;
+	margin: .05rem .03rem;
+	padding: 0 0;
+	/*line-height: 1rem;
+	text-align: center;
+	font-size: .5rem;*/
+	background-size: 100% 100%;
+}
+
+.changebackground .background-blue{
+	background: url(../img/background-blue.png);
+}
+
+.changebackground .background-black{
+	background: url(../img/background-black.png);
+}
+
+.changebackground .background-green{
+	background: url(../img/background-green.png);
+}
+
+.changebackgroundback{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}

@@ -12,7 +12,7 @@ namespace JdwxWeb.Api.Controllers
         [HttpPost]
         public async Task<ReturnResult<UsersModel>> RegisterUserInfo(ValidateUserApiModel model)
         {
-            return await Service.RegisterUserInfo(model.strCode, model.password);
+            return await Service.RegisterUserInfo(model.UserCode, model.Password);
         }
 
         [HttpPost]
@@ -36,7 +36,7 @@ namespace JdwxWeb.Api.Controllers
         [HttpPost]
         public async Task<ReturnResult<UsersModel>> ValidateUserInfo(ValidateUserApiModel model)
         {
-            return await Service.ValidateUserInfo(model.strCode, model.password);
+            return await Service.ValidateUserInfo(model.UserCode, model.Password);
         }
     }
 
@@ -46,8 +46,8 @@ namespace JdwxWeb.Api.Controllers
     }
     public class ValidateUserApiModel
     {
-        public string strCode { get; set; }
-        public string password { get; set; }
+        public string UserCode { get; set; }
+        public string Password { get; set; }
     }
     public class ChangeUserApiModel
     {
